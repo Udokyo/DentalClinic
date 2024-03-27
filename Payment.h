@@ -1,1 +1,3 @@
-
+class payment:
+public
+private
