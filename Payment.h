@@ -1,3 +1,4 @@
 class payment:
-public
+public:
+	bool madepayment(int price);
 private
