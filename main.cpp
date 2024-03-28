@@ -1,29 +1,29 @@
 #include <iostream>
 #include <string>
-#include "Patient.h"
+#include "patient.h"
 #include "dentist.h"
 #include "appointment.h"
 
 // Function to create a new patient by asking the user for input
 Patient createPatientFromInput() {
-	std::string id, name, gender, phone, email;
-	int age;
+	std::string fname, lname, gender, dob, phone, email;
 
-	std::cout << "Enter Patient ID: ";
-	std::cin >> id;
-	std::cout << "Enter Patient Name: ";
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore leftover newline
-	std::getline(std::cin, name); // Use getline to allow for names with spaces
-	std::cout << "Enter Patient Age: ";
-	std::cin >> age;
+	std::cout << "Enter Patient First Name: ";
+  	std::cin >> fname;
+  	std::cout << "Enter Patient Last Name: ";
+  	std::cin >> lname;
 	std::cout << "Enter Patient Gender: ";
-	std::cin >> gender;
-	std::cout << "Enter Patient Phone Number: ";
-	std::cin >> phone;
-	std::cout << "Enter Patient Email: ";
-	std::cin >> email;
+  	std::cin >> gender;
+  	std::cout << "Enter Patient DOB (MM-DD-YYYY): ";
+  	std::cin >> dob;
+  	std::cout << "Enter Patient Phone Number: ";
+  	std::cin >> phone;
+  	std::cin >> phone;
+  	std::cout << "Enter Patient Email: ";
+  	std::cin >> email;
+	
 
-	return Patient(id, name, age, gender, phone, email);
+	return Patient(fname, lname, gender, dob, phone, email);;
 }
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
 		<< "4. View upcoming appointments\n"
 		<< "5. View Patient information and medical history";
 	// implement try catch exception
-	cin >> optionSelection;
+	std::cin >> optionSelection;
 	if (optionSelection == 1) {
 		std::cout << "Please enter the patient's information below:\n";
 		Patient newPatient = createPatientFromInput();
@@ -47,5 +47,5 @@ int main() {
 	else if (optionSelection == 2) {
 		
 	} 
-	retutn 0;
+	return 0;
 }

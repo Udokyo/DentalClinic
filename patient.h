@@ -10,13 +10,14 @@ private:
     int patientID; // Instance-specific ID
     std::string firstName;
     std::string lastName;
+    std::string gender;
     std::string dob; // Date of Birth
     std::string phone;
     std::string email;
 
 public:
     Patient() = default;
-    Patient(const std::string& fname, const std::string& lname,
+    Patient(const std::string& fname, const std::string& lname, const std::string& gender,
         const std::string& dob, const std::string& phone, const std::string& email);
    
 
@@ -25,6 +26,7 @@ public:
     int getPatientID() const;
     std::string getFirstName() const;
     std::string getLastName() const;
+    std::string getGender() const;
     std::string getDOB() const;
     std::string getPhone() const;
     std::string getEmail() const;
@@ -32,6 +34,7 @@ public:
     // Setters
     void setFirstName(const std::string& fname);
     void setLastName(const std::string& lname);
+    void setLastName(const std::string& gender);
     void setDOB(const std::string& dob);
     void setPhone(const std::string& phone);
     void setEmail(const std::string& email);
