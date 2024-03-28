@@ -1,13 +1,13 @@
-#ifndef PATIENT_H
-#define PATIENT_H
+#ifndef DENTIST_H
+#define DENTIST_H
 
 #include <string>
 #include <vector>
 
-class Patient {
+class Dentist {
 private:
     static int nextID; // Static member to hold the next available ID;
-    int patientID; // Instance-specific ID
+    int dentistID; // Instance-specific ID
     std::string firstName;
     std::string lastName;
     std::string dob; // Date of Birth
@@ -15,14 +15,14 @@ private:
     std::string email;
 
 public:
-    Patient() = default;
-    Patient(const std::string& fname, const std::string& lname,
+    Dentist() = default;
+    Dentist(const std::string& fname, const std::string& lname,
         const std::string& dob, const std::string& phone, const std::string& email);
-   
+
 
     // Getters
     static int generateNextID(); // Static function to update and return the next ID
-    int getPatientID() const;
+    int getDentistID() const;
     std::string getFirstName() const;
     std::string getLastName() const;
     std::string getDOB() const;

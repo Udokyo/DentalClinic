@@ -32,12 +32,11 @@ int main() {
 	// Patient patientID;
 	std::cout << "Welcome to our Dental Clinic\n" 
 		<< "Select from the options below\n"
-		<< "1. Register patient\n"
+		<< "1. Patient Registeration\n"
 		<< "2. Schedule an appointment\n"
 		<< "3. View available Dentists\n"
-		<< "4. View appointments\n"
-		<< "5. View all patients\n"
-		<< "6. Retrieve patient information and medical history";
+		<< "4. View upcoming appointments\n"
+		<< "5. View Patient information and medical history";
 	// implement try catch exception
 	cin >> optionSelection;
 	if (optionSelection == 1) {
@@ -47,6 +46,6 @@ int main() {
 	}
 	else if (optionSelection == 2) {
 		
-	}
-
+	} 
+	retutn 0;
 }
